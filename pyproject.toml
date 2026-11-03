@@ -1,0 +1,22 @@
+[project]
+name = "workout-analyst"
+version = "0.1.0"
+description = "An LLM analytics agent for your Strava workouts and personal training log"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "stravalib==2.4",
+    "llm==0.31",
+    "python-dotenv==1.0.1",
+    "openai<3",
+    "scikit-learn",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["."]
+python_files = ["test_*.py"]
